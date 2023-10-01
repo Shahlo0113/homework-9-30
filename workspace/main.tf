@@ -8,11 +8,10 @@ terraform {
   }
 }
 provider "tfe" {
-  hostname = "app.terraform.io"
-  organization = "summercloud"
-  token = "nHLARsh471dzbQ.atlasv1.ZaNpO1UbyayBnnLAzkrHs2D2tEh4nNCetEhwXIojZd4YzjGVpvQ0izKKRUjOKbgE460"
+   version = "~> 0.48.0"
 }
 locals {
+    exec_type = "local"
   infra-components = [
     "vpc",
     "subnet",
