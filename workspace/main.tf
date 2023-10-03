@@ -1,5 +1,5 @@
 terraform {
-    required_providers {
+  required_providers {
     tfe = {
       version = "~> 0.48.0"
     }
@@ -23,12 +23,12 @@ data "tfe_organization" "summer-cloud" {
 }
 
 locals {
-    exec_type = "local"
-     infra-components = [
-        "vpc",
-        "subnet",
-        "ec2",
-    ]
+  exec_type = "local"
+  infra-components = [
+    "vpc",
+    "subnet",
+    "ec2",
+  ]
 }
 
 resource "tfe_workspace" "test" {
